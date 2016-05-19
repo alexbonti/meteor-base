@@ -29,19 +29,47 @@ spacebars
 check
 reactive-dict
 
+# essential
+
+matb33:collection-hooks
+tmeasday:publish-counts
+meteorhacks:aggregate
+iron:router
+momentjs:moment
+reactive-var
+http
+
+
+
 # Community Packages
 
 flemay:less-autoprefixer
 aldeed:collection2
-kadira:flow-router
 kadira:blaze-layout
-useraccounts:semantic-ui
 natestrauser:animate-css
 dburles:collection-helpers
 meteorhacks:fast-render
 johnantoni:meteor-normalize
 ostrio:templatehelpers
-semantic:ui-css
 standard-minifier-css
 standard-minifier-js
 simple:dev-error-overlay
+
+
+
+
+
+################ ESSENTIALS ################
+
+
+
+################ OPTIONAL / HELPFUL PACKAGES ################
+
+#dburles:google-maps
+juliancwirko:s-alert
+fortawesome:fontawesome
+
+#meteortoys:allthings
+percolate:synced-cron
+
+materialize:materialize

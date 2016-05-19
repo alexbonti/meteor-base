@@ -10,6 +10,7 @@ Template.login.events({
      */
     'click #login-button': function(e) {
 
+
         // read values from form
         var email = $('#username').val();
         var password = $('#password').val();
@@ -20,11 +21,13 @@ Template.login.events({
         // login with local account
         Meteor.loginWithPassword(email, password, function(err) {
             if (err) {
+                console.log(err)
                 // login failed
-                $('.fa-spinner').hide();
-                $('#login-button').removeClass('btn-primary').addClass('btn-danger');
+                //$('.fa-spinner').hide();
+                //$('#login-button').removeClass('btn-primary').addClass('btn-danger');
             }
             else {
+                alert('login')
                 // login successful - the route will take care of the redirect
             }
         });
