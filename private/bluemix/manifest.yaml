@@ -1,0 +1,11 @@
+applications:
+- memory: 512M
+  domain: mybluemix.net
+  path: .
+  buildpack: https://github.com/alexbonti/bluemix-buildpack-meteor
+  host: testmeteor-alessio
+  name: testmeteor-alessio
+  disk: 512M
+  services:
+    - mongolab-meteor
+  instances: 1

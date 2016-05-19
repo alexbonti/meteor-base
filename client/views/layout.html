@@ -1,0 +1,39 @@
+<!-- Meta tags for the document head. Add external Javascript / CSS here -->
+<head>
+	<!-- make sure this app can be properly displayed on a mobile device -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+	<link rel="icon" href="/favicon.png" type="image/png" />
+</head>
+
+
+<template name="layout">
+	{{!-- The main layout template --}}
+
+	{{#if lostConnection}}
+		{{>connecting}}
+	{{/if}}
+
+	{{> notifications}}
+
+
+	{{#if currentUser}}
+		{{!-- if the user is logged in show the header and main yield --}}
+		<div class="container">
+			<div class="row">
+				<div class="col s12 col-no-padding">
+						{{> header}}
+				</div>
+				<div class="col s12" id="main">
+					{{> yield}}
+				</div>
+			</div>
+
+		</div>
+	{{/if}}
+
+	{{!-- show login form only if not logged in, yield will be specified by the route via this.render(templateName) --}}
+	{{#unless currentUser}}
+		{{> yield}}
+	{{/unless}}
+</template>
